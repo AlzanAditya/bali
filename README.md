@@ -1,24 +1,22 @@
-# Bali Bagus Journey — Vite + React + TanStack Router
+# Bali Bagus Journey — Vite migration
 
-This project is a Vite/React conversion of the downloaded Bali Bagus Journey site.
+The original downloaded website is preserved unchanged under `reference/balibagusjourney.com/`.
 
-## Source preservation
-The untouched downloaded site is preserved in `reference/balibagusjourney.com/`. It is not used as the runtime source of the React app.
+## Architecture
 
-## Structure
-- `src/components/` — shared header, footer, and page shell
-- `src/pages/` — converted page components
-- `src/lib/` — navigation, animation, smooth-scroll, and interaction modules
-- `src/styles/vendor/` — original downloaded CSS bundles kept separately
-- `public/assets/` and `public/storage/` — static assets/storage with the same folder structure as the download
-- `scripts/prerender.tsx` — static generation step
+- Vite + React + TypeScript
+- TanStack Router
+- Data-driven page templates
+- Modular feature JavaScript under `src/features/`
+- Modular CSS under `src/styles/`
+- Static generation via `scripts/prerender.mjs`
+- Tour, blog, and transport detail pages are generated from one data collection per content type.
 
-## Commands
+## Build
+
 ```bash
 npm install
-npm run dev
 npm run build
 ```
 
-`npm run build` first creates the Vite production bundle and then prerenders the available pages into `.html` files matching the downloaded site's URL/file structure.
-# bali
+The build emits `.html` routes matching the downloaded site's URL structure while using Vite-generated assets. Original build files remain only inside `reference/` for comparison.

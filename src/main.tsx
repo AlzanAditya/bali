@@ -1,19 +1,12 @@
-import React from 'react'
-import { hydrateRoot, createRoot } from 'react-dom/client'
-import { RouterProvider } from '@tanstack/react-router'
-import { createAppRouter } from './router'
-import './styles/vendor/app-CXiiNhT6.css'
-import './styles/vendor/app-DOXEB0I_.css'
-import './styles/site.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { RouterProvider } from '@tanstack/react-router';
+import { router } from './router';
+import './styles/index.css';
+import './vendor/runtime.js';
 
-const router = createAppRouter()
-
-const root = document.getElementById('root')!
-const app = (
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
-)
-
-if (root.hasChildNodes()) hydrateRoot(root, app)
-else createRoot(root).render(app)
+  </React.StrictMode>,
+);

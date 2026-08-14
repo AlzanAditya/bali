@@ -1,15 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { tanstackRouter } from '@tanstack/router-plugin/vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: './',
-  plugins: [
-    tanstackRouter({ target: 'react', autoCodeSplitting: true }),
-    react(),
-  ],
+  plugins: [react()],
   build: {
-    manifest: true,
-    sourcemap: true,
+    assetsDir: 'vite-assets',
+    rollupOptions: {
+      input: 'index.html',
+    },
   },
-})
+});
