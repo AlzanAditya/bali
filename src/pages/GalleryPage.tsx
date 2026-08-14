@@ -1,7 +1,3 @@
-import { PageRenderer } from '../components/PageRenderer';
-import { pagesByPath } from '../data/pages';
-
-export default function GalleryPage() {
-  const page = pagesByPath.get('/gallery.html');
-  return page ? <PageRenderer page={page} /> : null;
-}
+import { SEO } from '../components/SEO/SEO'; import { PageHero, SectionIntro } from '../components/Hero/Hero';
+const images=['bdk2uvvu6stlowu9fhjc.webp','dkuokdg5xh0xpytwno7v.webp','erpcsospbml5v1sl6xzs.webp','sotlfso1va1cge2szlmn.webp','tpaoqgzfbkrfpwntmtje.webp','ttoubtl9ndmw21ny1c3q.webp','uwvcv1a5gxmyr9fiphlw.webp','xkcqpgpatfpmvfixwgl9.webp'];
+export function GalleryPage(){return <><SEO title="Journey Gallery - Bali Bagus Journey" description="A visual journey through Bali's wonders." canonical="/gallery.html"/><PageHero eyebrow="Journey Gallery" title="Where Every Journey Becomes a Memory" text="Every photo captures the beauty of Bali, the people, and the experiences that make a trip unforgettable."/><section className="px-4 py-14 md:px-8 lg:px-12 lg:py-20"><div className="mx-auto max-w-7xl"><SectionIntro title="Explore Our Gallery"/><div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">{images.map(x=><img key={x} src={`/assets/galleries/${x}`} alt="Bali travel moment" className="aspect-square rounded-2xl object-cover transition-transform duration-500 hover:scale-[1.02]"/>)}</div></div></section></>}

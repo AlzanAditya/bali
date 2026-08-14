@@ -3,10 +3,18 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   build: {
-    assetsDir: 'vite-assets',
+    target: 'es2020',
+    sourcemap: true,
     rollupOptions: {
-      input: 'index.html',
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', '@tanstack/react-router'],
+          motion: ['gsap', 'lenis'],
+          date: ['flatpickr'],
+        },
+      },
     },
   },
 });

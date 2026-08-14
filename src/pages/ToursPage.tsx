@@ -1,7 +1,2 @@
-import { PageRenderer } from '../components/PageRenderer';
-import { pagesByPath } from '../data/pages';
-
-export default function ToursPage() {
-  const page = pagesByPath.get('/tours.html');
-  return page ? <PageRenderer page={page} /> : null;
-}
+import { useMemo, useState } from 'react'; import { SEO } from '../components/SEO/SEO'; import { PageHero, SectionIntro } from '../components/Hero/Hero'; import { TourCard } from '../components/Cards/Cards'; import { tours } from '../data/tours';
+export function ToursPage(){const [filter,setFilter]=useState('all'); const list=useMemo(()=>filter==='all'?tours:tours.filter(t=>t.category===filter),[filter]); return <><SEO title="Bali Private Tours & Activities - Bali Bagus Journey" description="Browse private Bali day tours and activities with Bali Bagus Journey." canonical="/tours.html"/><PageHero eyebrow="Tours & Activities" title="Bali Tour Packages for Every Traveler" text="Discover private tours, family-friendly adventures, cultural experiences, and island hopping."/><section className="px-4 py-14 md:px-8 lg:px-12 lg:py-20"><div className="mx-auto max-w-7xl"><SectionIntro title="Filter Tours by:"/><div className="mb-8 flex flex-wrap gap-2">{['all','Island Hopping','Temple & Culture','Adventure','Nature & Scenery'].map(x=><button key={x} onClick={()=>setFilter(x)} className={`gsap-tours-filter-tab rounded-full border border-border px-4 py-2 text-sm font-semibold transition-colors ${filter===x?'bg-foreground text-white':'bg-white'}`}>{x==='all'?'All Tours':x}</button>)}</div><div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{list.map(t=><TourCard key={t.slug} tour={t}/>)}</div></div></section></>}

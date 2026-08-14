@@ -1,7 +1,2 @@
-import { PageRenderer } from '../components/PageRenderer';
-import { pagesByPath } from '../data/pages';
-
-export default function BlogsPage() {
-  const page = pagesByPath.get('/blogs.html');
-  return page ? <PageRenderer page={page} /> : null;
-}
+import { useMemo, useState } from 'react'; import { SEO } from '../components/SEO/SEO'; import { PageHero, SectionIntro } from '../components/Hero/Hero'; import { BlogCard } from '../components/Cards/Cards'; import { blogs } from '../data/blogs';
+export function BlogsPage(){const [filter,setFilter]=useState('all');const list=useMemo(()=>filter==='all'?blogs:blogs.filter(b=>b.category===filter),[filter]);return <><SEO title="Bali Travel Blog - Tips, Guides & Destination Stories | Bali Bagus Journey" description="Read Bali travel tips, destination guides, and insider stories from Bali Bagus Journey." canonical="/blogs.html"/><PageHero eyebrow="Blog & Articles" title="Travel Guides & Stories" text="Discover destination guides, travel tips, local insights, and stories for your Bali trip."/><section className="px-4 py-14 md:px-8 lg:px-12 lg:py-20"><div className="mx-auto max-w-7xl"><SectionIntro title="Filter Blog & Articles by:"/><div className="mb-8 flex flex-wrap gap-2">{['all','Things to Do','Food & Culture','Travel Tips'].map(x=><button key={x} onClick={()=>setFilter(x)} className={`gsap-blogs-filter-tab rounded-full border border-border px-4 py-2 text-sm font-semibold ${filter===x?'bg-foreground text-white':'bg-white'}`}>{x==='all'?'All Blog & Articles':x}</button>)}</div><div className="grid gap-5 md:grid-cols-2">{list.map(b=><BlogCard key={b.slug} blog={b}/>)}</div></div></section></>}

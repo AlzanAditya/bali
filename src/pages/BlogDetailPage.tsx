@@ -1,10 +1,2 @@
-import { useParams } from '@tanstack/react-router';
-import { PageRenderer } from '../components/PageRenderer';
-import { blogsByPath } from '../data/blogs';
-
-export default function BlogDetailPage() {
-  const { slug } = useParams({ strict: false });
-  const normalized = slug.endsWith('.html') ? slug : `${slug}.html`;
-  const page = blogsByPath.get(`/blogs/${normalized}`);
-  return page ? <PageRenderer page={page} /> : null;
-}
+import { Link } from '@tanstack/react-router'; import { SEO } from '../components/SEO/SEO'; import { blogs, blogBySlug } from '../data/blogs';
+export function BlogDetailPage({slug}:{slug:string}){const blog=blogBySlug(slug)??blogs[0];return <><SEO title={`${blog.title} | Bali Bagus Journey`} description={blog.excerpt} canonical={`/blogs/${blog.slug}.html`}/><section className="relative flex min-h-[55dvh] items-end overflow-hidden px-4 pb-12 pt-32 text-white md:px-8 lg:px-12"><img src={blog.image} alt={blog.title} className="absolute inset-0 size-full object-cover"/><div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20"/><div className="relative z-10 mx-auto w-full max-w-5xl"><div className="mb-4 text-sm font-semibold uppercase tracking-wide text-white/70">{blog.category}</div><h1 className="text-3xl font-semibold leading-snug md:text-5xl lg:text-6xl">{blog.title}</h1></div></section><article className="px-4 py-14 md:px-8 lg:px-12 lg:py-20"><div className="mx-auto max-w-3xl"><div className="gsap-blog-detail-content opacity-0 translate-y-8">{blog.content?.length?blog.content.map((p,i)=>i%3===0?<div key={i}><h2 className="mb-4 mt-10 text-2xl font-semibold">{p}</h2></div>:<p key={i} className="mb-5 text-base leading-8 text-text-paragraf">{p}</p>):<><p className="text-lg leading-8 text-text-paragraf">{blog.excerpt}</p><p className="mt-6 leading-8 text-text-paragraf">This guide brings together practical local insight to help you plan a smoother Bali trip. Use it as a starting point, then adapt the details to your own dates, interests, and pace.</p></>}</div><div className="mt-12 border-t border-border pt-8"><Link to="/blogs.html" className="rounded-full bg-foreground px-5 py-3 font-semibold text-white">← Back to Blog</Link></div></div></article></>}
