@@ -1,6 +1,5 @@
 import { useMemo, useState, useRef, useEffect } from 'react';
 import flatpickr from 'flatpickr';
-import 'flatpickr/dist/flatpickr.css';
 import type { Tour } from '../../data/tours';
 
 export function BookingForm({tour}:{tour:Tour}){
