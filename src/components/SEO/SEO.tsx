@@ -1,20 +1,23 @@
-import { useEffect } from 'react';
-
-export function SEO({ title, description, canonical }: { title: string; description?: string; canonical?: string }) {
-  useEffect(() => {
-    document.title = title;
-    const setMeta = (name: string, content?: string) => {
-      if (!content) return;
-      let el = document.head.querySelector(`meta[name="${name}"]`) as HTMLMetaElement | null;
-      if (!el) { el = document.createElement('meta'); el.name = name; document.head.appendChild(el); }
-      el.content = content;
-    };
-    setMeta('description', description);
-    if (canonical) {
-      let link = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-      if (!link) { link = document.createElement('link'); link.rel = 'canonical'; document.head.appendChild(link); }
-      link.href = new URL(canonical, window.location.origin).href;
-    }
-  }, [title, description, canonical]);
-  return null;
+/**
+ * SEO metadata is rendered as real React head elements instead of being
+ * injected through an effect. React 19 hoists <title>, <meta>, and <link>
+ * elements into <head> during SSR/SSG and also keeps them correct on the
+ * client after navigation.
+ */
+export function SEO({
+  title,
+  description,
+  canonical,
+}: {
+  title: string;
+  description?: string;
+  canonical?: string;
+}) {
+  return (
+    <>
+      <title>{title}</title>
+      {description ? <meta name="description" content={description} /> : null}
+      {canonical ? <link rel="canonical" href={canonical} /> : null}
+    </>
+  );
 }

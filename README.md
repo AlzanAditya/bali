@@ -1,6 +1,6 @@
 # Bali Bagus Journey — Vite + React Reimplementation
 
-This project reimplements the downloaded Bali Bagus Journey website using Vite, React, TanStack Router, GSAP, Lenis, Flatpickr, and browser-based prerendering.
+This project reimplements the downloaded Bali Bagus Journey website using Vite, React, TanStack Router, GSAP, Lenis, and Flatpickr.
 
 ## Reference
 
@@ -8,9 +8,8 @@ This project reimplements the downloaded Bali Bagus Journey website using Vite, 
 
 ## Reverse-engineering map
 
-- `build/assets/app-UDDpqGAS.js` → modular behavior in `src/features/`
-- `build/assets/app-CXiiNhT6.css` → `src/styles/vendor.css`
-- `build/assets/app-DOXEB0I_.css` → separated into `theme.css`, `base.css`, `utilities.css`, `components.css`, and `animations.css`
+- `build/assets/*.js` → modular behavior in `src/features/`
+- `build/assets/*.css` → separated into `src/styles/`
 - inline booking script → `src/features/booking/` and `BookingForm.tsx`
 - repeated site chrome → `src/components/Header/`, `Footer/`, `Layout/`
 - tour/blog/transport content → `src/data/`
@@ -26,4 +25,6 @@ npm install
 npm run build
 ```
 
-`npm run build` runs Vite first, then opens the built SPA in a headless Chromium browser and writes the static HTML files into `dist/` while retaining the original `.html` URL structure.
+The build performs Vite compilation first, then uses React server rendering with TanStack Router's memory history to generate static HTML for every configured route. It does **not** require Playwright, Chromium, or a running preview server.
+
+This keeps the SSG step deterministic and lightweight for Cloudflare Pages while preserving the original `.html` URL structure.

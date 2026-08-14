@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs",
+    "build": "vite build && tsx scripts/prerender.tsx",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.7.0",
-    "playwright": "^1.54.2",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "tsx": "^4.20.3"
   }
 }
