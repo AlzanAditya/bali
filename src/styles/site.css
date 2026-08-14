@@ -1,0 +1,13 @@
+/* Modular site-level overrides. The downloaded CSS bundles are kept separately under styles/vendor/. */
+
+.is-current {
+  /* The original navigation already defines its visual states; this hook is intentionally minimal. */
+}
+
+[data-mobile-menu] {
+  transition: opacity 240ms ease, visibility 240ms ease, transform 240ms ease;
+}
+
+[data-mobile-menu]:not(.is-open) {
+  pointer-events: none;
+}

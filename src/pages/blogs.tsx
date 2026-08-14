@@ -1,0 +1,280 @@
+import { PageShell } from '../components/PageShell'
+
+export function BlogsPage() {
+  return (
+    <PageShell>
+      
+
+<main className={"min-h-dvh"}>
+<section id={"headline"} className={"relative min-h-[60dvh] md:min-h-[45dvh] lg:min-h-[68dvh] 2xl:min-h-[52dvh] 2xl:max-h-[52dvh] flex items-end 2xl:container mx-auto"}>
+<div className={"absolute overflow-hidden inset-0 lg:inset-5 lg:top-4 lg:rounded-3xl 2xl:inset-x-0 lg:bottom-auto lg:h-[68dvh] 2xl:max-h-[50dvh]"}>
+<div className={"gsap-tours-overlay opacity-0 absolute z-10 h-full w-full lg:rounded-3xl bg-foreground/50 lg:bg-transparent lg:bg-linear-to-b from-0% from-foreground/40 via-40% via-foreground/0 to-80% to-foreground/80 lg:to-foreground/70"}></div>
+<img src={"assets/blogs/headline.html"} alt={"Scenic view of Bali mountains and valleys, representing diverse Bali tour packages"} fetchpriority={"high"} decoding={"async"} className={"gsap-tours-bg opacity-0 scale-105 absolute inset-0 w-full h-full object-cover lg:rounded-3xl"} />
+</div>
+<div className={"px-5 md:px-12 lg:px-20 2xl:px-36 pb-12 md:pb-20 relative z-20 w-full"}>
+<div className={"text-center flex flex-col items-center"}>
+<div className={"gsap-tours-badge opacity-0 translate-y-16 flex items-center gap-2 w-fit bg-white border border-border rounded-full px-2.5 pr-3 py-2 mb-5 lg:mb-6"}>
+<div className={"size-2.5 bg-primary rounded-full"}></div>
+<strong className={"font-medium text-sm md:text-base text-foreground"}>Blog & Articles</strong>
+</div>
+<h1 className={"gsap-tours-title opacity-0 translate-y-16 text-3xl md:text-5xl lg:text-[52px] w-full mb-4 font-semibold text-white leading-snug lg:leading-[1.2]"}>
+               Travel Guides & Stories
+            </h1>
+<p className={"gsap-tours-text opacity-0 translate-y-16 text-sm text-white w-full md:w-[72%] lg:w-[32%] leading-relaxed"}>
+                Discover destination guides, travel tips, local insights, and inspiration to help you experience the very best of Bali.
+            </p>
+</div>
+</div>
+</section>
+<section id={"blogs-grid-section"} className={"2xl:container mx-auto px-5 md:px-12 lg:px-20 2xl:px-30 py-15 2xl:py-20"}>
+<div className={"flex flex-col items-center w-full mb-10"}>
+<h3 className={"gsap-blogs-filter-heading opacity-0 translate-y-16 text-lg md:text-xl font-semibold text-foreground mb-6"}>
+            Filter Blog & Articles by:
+        </h3>
+<div className={"relative w-full max-w-full"}>
+<div className={"filter-tabs w-full flex flex-nowrap md:flex-wrap items-center justify-start md:justify-center gap-2.5 md:gap-4 overflow-x-auto md:overflow-visible pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"}>
+<button data-filter={"all"} className={"gsap-blogs-filter-tab shrink-0 opacity-0 scale-50 translate-y-8 filter-tab-btn-blog flex items-center gap-2 md:gap-3 border border-border px-1.5 md:px-2 pr-4 md:pr-5 py-1.5 md:py-2 rounded-full transition-all duration-300 bg-foreground text-background"}>
+<div className={"bg-primary size-7 md:size-8 rounded-full flex items-center justify-center text-white shrink-0"}>
+<svg className={"size-3.5 md:size-4"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}>
+<line x1={"8"} y1={"6"} x2={"21"} y2={"6"}></line>
+<line x1={"8"} y1={"12"} x2={"21"} y2={"12"}></line>
+<line x1={"8"} y1={"18"} x2={"21"} y2={"18"}></line>
+<line x1={"3"} y1={"6"} x2={"3.01"} y2={"6"}></line>
+<line x1={"3"} y1={"12"} x2={"3.01"} y2={"12"}></line>
+<line x1={"3"} y1={"18"} x2={"3.01"} y2={"18"}></line>
+</svg>
+</div>
+<span className={"text-xs md:text-sm font-semibold"}>All Blog & Articles</span>
+</button>
+<button data-filter={"things-to-do"} className={"gsap-blogs-filter-tab shrink-0 opacity-0 scale-50 translate-y-8 filter-tab-btn-blog flex items-center gap-2 md:gap-3 border border-border px-1.5 md:px-2 pr-4 md:pr-5 py-1.5 md:py-2 rounded-full transition-all duration-300 bg-white text-foreground hover:bg-foreground/5"}>
+<div className={"bg-primary p-1.5 rounded-full flex items-center justify-center text-white shrink-0 overflow-hidden"}>
+<img src={"storage/category-icons/01KZWDR1EQ29BW236BRKY1SP1F.html"} className={"size-5 object-cover"} alt={"Things to Do Icon"} /></div>
+<span className={"text-xs md:text-sm font-semibold"}>Things to Do</span>
+</button>
+<button data-filter={"food-culture"} className={"gsap-blogs-filter-tab shrink-0 opacity-0 scale-50 translate-y-8 filter-tab-btn-blog flex items-center gap-2 md:gap-3 border border-border px-1.5 md:px-2 pr-4 md:pr-5 py-1.5 md:py-2 rounded-full transition-all duration-300 bg-white text-foreground hover:bg-foreground/5"}>
+<div className={"bg-primary p-1.5 rounded-full flex items-center justify-center text-white shrink-0 overflow-hidden"}>
+<img src={"storage/category-icons/01KZWDVTNRC37EBVDPDSTZTQ5T.html"} className={"size-5 object-cover"} alt={" Food & Culture Icon"} /></div>
+<span className={"text-xs md:text-sm font-semibold"}> Food & Culture</span>
+</button>
+<button data-filter={"travel-tips"} className={"gsap-blogs-filter-tab shrink-0 opacity-0 scale-50 translate-y-8 filter-tab-btn-blog flex items-center gap-2 md:gap-3 border border-border px-1.5 md:px-2 pr-4 md:pr-5 py-1.5 md:py-2 rounded-full transition-all duration-300 bg-white text-foreground hover:bg-foreground/5"}>
+<div className={"bg-primary p-1.5 rounded-full flex items-center justify-center text-white shrink-0 overflow-hidden"}>
+<img src={"storage/category-icons/01KZWDWGCB2Z6SA84GAX4EJDTE.html"} className={"size-5 object-cover"} alt={"Travel Tips Icon"} />
+</div>
+<span className={"text-xs md:text-sm font-semibold"}>Travel Tips</span>
+</button>
+</div>
+<div className={"absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent md:hidden pointer-events-none z-10"}></div>
+</div>
+</div>
+<div id={"blogs-grid"} className={"grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4.5"}>
+<div className={"blog-item"} data-category={"things-to-do"}>
+<div className={"gsap-blog-card opacity-0 translate-y-16 flex gap-4 md:gap-5 lg:gap-6 items-center bg-card p-4 md:p-5 lg:p-6 rounded-2xl"}>
+<img src={"storage/blog-covers/01KZWE8G8XFBR2ZPVM5YM33MJ2.webp"} alt={"10 Best Things to Do in Bali for First-Time Visitors"} className={"rounded-xl lg:rounded-2xl hidden md:block md:size-32 lg:size-40 lg:h-40 object-cover shrink-0"} loading={"lazy"} />
+<div className={"flex flex-col h-full justify-between"}>
+<div className={"mb-3 lg:mb-4.5 grow"}>
+<h3 className={"text-base lg:text-lg font-semibold mb-1.5 lg:mb-2 line-clamp-2"}>10 Best Things to Do in Bali for First-Time Visitors</h3>
+<p className={"text-xs lg:text-sm line-clamp-2 text-foreground/80"}>
+                10 Best Things to Do in Bali for First-Time VisitorsBali has a way of overwhelming first-time visitors in the best way possible. Between ancient temples, rice terrace views, world-class surf breaks, and a food scene that could keep you busy for weeks, narrowing down an itinerary can feel impossible. If this is your first trip to the Island of the Gods, here are ten experiences worth building your schedule around.1. Watch the Sunset at Tanah Lot TemplePerched on a rock formation just off the coast, Tanah Lot is one of Bali&#039;s most photographed sea temples. Arrive a couple of hours before sunset to explore the surrounding market stalls and grab a spot along the cliffside before the sky turns gold. It gets crowded, so an early arrival — or a guided tour that times your visit well — makes a real difference.2. Walk Through the Tegallalang Rice TerracesJust north of Ubud, the Tegallalang terraces show off the traditional Balinese subak irrigation system, a UNESCO-recognized method of water management that&#039;s been used for centuries. Go early in the morning to beat both the heat and the crowds, and budget time for a coffee break at one of the terrace-view cafés.3. Explore the Sacred Monkey Forest SanctuaryThis shaded forest sanctuary in the heart of Ubud is home to hundreds of long-tailed macaques and several ancient temple structures. It&#039;s a quick stop, but a memorable one — just keep sunglasses and loose items tucked away.4. Chase Waterfalls in North BaliSekumpul, Tegenungan, and Nungnung waterfalls are all popular, but each requires a different level of effort to reach. If you only have time for one, Sekumpul&#039;s multi-tiered cascade is widely considered the most dramatic — though the hike down (and back up) is no joke.5. Snorkel or Dive Around Nusa PenidaThe waters around Nusa Penida and the nearby Nusa islands are known for manta ray sightings, dramatic drop-offs, and clear visibility. A day trip by fast boat is the easiest way to fit this into a shorter itinerary.6. Catch a Traditional Kecak Fire DanceThis hypnotic performance, set against a chorus of chanting rather than instruments, tells the story of the Ramayana. Uluwatu Temple hosts one of the most atmospheric versions, with the sunset and cliffside setting adding to the drama.7. Visit Besakih, Bali&#039;s &quot;Mother Temple&quot;Located on the slopes of Mount Agung, Besakih is the largest and holiest temple complex on the island. It&#039;s a longer trip from the south, but a meaningful one if you&#039;re interested in Balinese Hindu architecture and spiritual life.8. Ride Through Rice Fields on a Bike or ScooterRenting a bike (or joining a downhill cycling tour from Kintamani) is one of the most relaxed ways to see rural Bali up close — village temples, working rice paddies, and roadside offerings included.9. Soak in a Natural Hot SpringToya Devasya near Lake Batur and the hot springs at Banjar in the north both combine mineral-rich water with volcanic or forest views. A good way to rest tired legs after a day of temple-hopping or trekking.10. Watch the Sunrise from Mount BaturFor travelers who don&#039;t mind a pre-dawn start, the trek up Mount Batur rewards you with a sunrise over the caldera and, on clear days, views stretching to Mount Agung and Lombok. Most trekkers go with a local guide, both for safety and to support the surrounding village communities.Planning Tip: Group Your Days by RegionBali is bigger than it looks on a map, and traffic can eat into your day fast. Rather than crisscrossing the island daily, group activities by region — Ubud and the central highlands one day, Uluwatu and the southern peninsula another, Nusa Penida as its own full-day trip. If you&#039;re working with a local tour and transport service, ask them to help sequence your days this way; it&#039;s one of the easiest ways to get more out of a short trip.
+            </p>
+</div>
+<div className={"flex flex-col-reverse md:flex-row gap-6 md:gap-0 justify-between md:items-center mt-auto"}>
+<a href={"blogs/10-best-things-to-do-in-bali-for-first-time-visitors.html"} className={"group inline-flex items-center justify-center gap-3 font-semibold rounded-full text-sm cursor-pointer transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary bg-white text-foreground hover:bg-white/90 pl-3 pr-1.5 py-1.5 lg:pl-4 lg:pr-2 lg:py-2 w-fit text-xs lg:text-sm"}>
+<div className={"relative overflow-hidden flex items-center justify-center"}>
+<span className={"block transition-transform duration-500 group-hover:translate-y-[150%]"}>Read Article</span>
+<span className={"absolute block transition-transform duration-500 -translate-y-[150%] group-hover:translate-y-0"}>Read Article</span>
+</div>
+<span className={"bg-primary text-white p-1.5 rounded-full relative overflow-hidden flex items-center justify-center"}>
+<span className={"inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 group-hover:translate-x-[150%] group-hover:-translate-y-[150%]"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+<span className={"absolute inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+
+<span className={"absolute top-0 -left-[100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[400%] pointer-events-none z-10"}></span>
+</span>
+</a>
+<div className={"flex items-center gap-2 text-text-label-secondary text-xs md:text-sm font-medium"}>
+<svg className={"feather feather-calendar"} xmlns={"http://www.w3.org/2000/svg"} width={"24"} height={"24"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}><rect x={"3"} y={"4"} width={"18"} height={"18"} rx={"2"} ry={"2"}></rect><line x1={"16"} y1={"2"} x2={"16"} y2={"6"}></line><line x1={"8"} y1={"2"} x2={"8"} y2={"6"}></line><line x1={"3"} y1={"10"} x2={"21"} y2={"10"}></line></svg>                12 August 2026
+            </div>
+</div>
+</div>
+</div>
+</div>
+<div className={"blog-item"} data-category={"things-to-do"}>
+<div className={"gsap-blog-card opacity-0 translate-y-16 flex gap-4 md:gap-5 lg:gap-6 items-center bg-card p-4 md:p-5 lg:p-6 rounded-2xl"}>
+<img src={"storage/blog-covers/01KZWE77NTAANHAVV4RNZT76NY.webp"} alt={"Bali Adventure Activities: From Volcano Trekking to White-Water Rafting"} className={"rounded-xl lg:rounded-2xl hidden md:block md:size-32 lg:size-40 lg:h-40 object-cover shrink-0"} loading={"lazy"} />
+<div className={"flex flex-col h-full justify-between"}>
+<div className={"mb-3 lg:mb-4.5 grow"}>
+<h3 className={"text-base lg:text-lg font-semibold mb-1.5 lg:mb-2 line-clamp-2"}>Bali Adventure Activities: From Volcano Trekking to White-Water Rafting</h3>
+<p className={"text-xs lg:text-sm line-clamp-2 text-foreground/80"}>
+                Bali Adventure Activities: From Volcano Trekking to White-Water RaftingBeaches and temples get most of the attention, but Bali is also a genuinely good adventure destination. Volcanic terrain, fast-flowing rivers, and a coastline built for surfing and diving mean there&#039;s no shortage of ways to get your heart rate up. Here&#039;s a guide to the island&#039;s best adventure activities, and what to know before you book.Volcano Trekking: Mount Batur and Mount AgungMount Batur is the classic choice for a sunrise trek — a roughly two-hour climb starting around 3 or 4 a.m., manageable for most fitness levels with a guide. Mount Agung, Bali&#039;s highest and most sacred peak, is a far more demanding climb reserved for experienced trekkers, and access is sometimes restricted during religious ceremonies, so it&#039;s worth checking current conditions before planning around it.White-Water Rafting on the Ayung or Telaga Waja RiverThe Ayung River near Ubud is the more scenic, beginner-friendly option, winding through jungle gorges and past rice terraces. The Telaga Waja River in East Bali has stronger rapids and a faster pace, better suited to travelers who&#039;ve rafted before. Most operators include transport, safety gear, and a meal, making it an easy half-day activity to slot into a longer itinerary.Canyoning in Gitgit or BongkasaCanyoning combines abseiling, cliff jumping, natural water slides, and swimming through narrow river canyons. It&#039;s physically demanding but doesn&#039;t require prior experience — guides handle the technical rope work. Bongkasa, closer to Ubud, is a popular option for travelers short on time.Surfing Bali&#039;s Reef and Beach BreaksFrom the beginner-friendly beach breaks of Kuta and Canggu to the more advanced reef breaks at Uluwatu and Padang Padang, Bali&#039;s surf scene covers every skill level. Dry season (April to October) generally brings more consistent swell on the west and south coasts, while wet season shifts good conditions toward the east.ATV and Buggy Rides Through Rice Fields and JungleFor a more low-key adrenaline fix, ATV tours near Ubud take riders through mud tracks, rivers, and rural villages that are otherwise hard to reach. It&#039;s a good option for groups or families traveling with less-experienced riders.Cliff Jumping and Coasteering at Blue LagoonPadang Bai&#039;s Blue Lagoon has a cliff jump platform alongside calm, clear water that&#039;s also good for snorkeling — a nice way to combine a low-effort adventure activity with a beach day.When to Book Adventure ActivitiesWeather affects almost every activity on this list, from river levels for rafting to visibility for volcano sunrise treks. Dry season (April–October) is generally the most reliable window, but even then, mornings tend to be clearer than afternoons for anything involving views. Booking a day or two ahead — rather than same-day — also gives operators time to adjust group sizes and timing around conditions.Combining Adventure Days with Rest DaysAdventure activities in Bali tend to involve early starts, humidity, and a fair amount of physical exertion, so it&#039;s worth pacing them rather than stacking several in a row. A common approach: alternate an active day (trekking, rafting, canyoning) with a slower one (temples, food, beach time) to avoid burning out mid-trip.
+            </p>
+</div>
+<div className={"flex flex-col-reverse md:flex-row gap-6 md:gap-0 justify-between md:items-center mt-auto"}>
+<a href={"blogs/bali-adventure-activities-from-volcano-trekking-to-white-water-rafting.html"} className={"group inline-flex items-center justify-center gap-3 font-semibold rounded-full text-sm cursor-pointer transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary bg-white text-foreground hover:bg-white/90 pl-3 pr-1.5 py-1.5 lg:pl-4 lg:pr-2 lg:py-2 w-fit text-xs lg:text-sm"}>
+<div className={"relative overflow-hidden flex items-center justify-center"}>
+<span className={"block transition-transform duration-500 group-hover:translate-y-[150%]"}>Read Article</span>
+<span className={"absolute block transition-transform duration-500 -translate-y-[150%] group-hover:translate-y-0"}>Read Article</span>
+</div>
+<span className={"bg-primary text-white p-1.5 rounded-full relative overflow-hidden flex items-center justify-center"}>
+<span className={"inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 group-hover:translate-x-[150%] group-hover:-translate-y-[150%]"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+<span className={"absolute inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+
+<span className={"absolute top-0 -left-[100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[400%] pointer-events-none z-10"}></span>
+</span>
+</a>
+<div className={"flex items-center gap-2 text-text-label-secondary text-xs md:text-sm font-medium"}>
+<svg className={"feather feather-calendar"} xmlns={"http://www.w3.org/2000/svg"} width={"24"} height={"24"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}><rect x={"3"} y={"4"} width={"18"} height={"18"} rx={"2"} ry={"2"}></rect><line x1={"16"} y1={"2"} x2={"16"} y2={"6"}></line><line x1={"8"} y1={"2"} x2={"8"} y2={"6"}></line><line x1={"3"} y1={"10"} x2={"21"} y2={"10"}></line></svg>                12 August 2026
+            </div>
+</div>
+</div>
+</div>
+</div>
+<div className={"blog-item"} data-category={"food-culture"}>
+<div className={"gsap-blog-card opacity-0 translate-y-16 flex gap-4 md:gap-5 lg:gap-6 items-center bg-card p-4 md:p-5 lg:p-6 rounded-2xl"}>
+<img src={"storage/blog-covers/01KZWEB01DQ19A61YT5V0QAB06.webp"} alt={"A Food Lover's Guide to Balinese Cuisine: Must-Try Dishes"} className={"rounded-xl lg:rounded-2xl hidden md:block md:size-32 lg:size-40 lg:h-40 object-cover shrink-0"} loading={"lazy"} />
+<div className={"flex flex-col h-full justify-between"}>
+<div className={"mb-3 lg:mb-4.5 grow"}>
+<h3 className={"text-base lg:text-lg font-semibold mb-1.5 lg:mb-2 line-clamp-2"}>A Food Lover's Guide to Balinese Cuisine: Must-Try Dishes</h3>
+<p className={"text-xs lg:text-sm line-clamp-2 text-foreground/80"}>
+                A Food Lover&#039;s Guide to Balinese Cuisine: Must-Try DishesBalinese food doesn&#039;t always get the spotlight that Balinese temples and beaches do, but it deserves just as much attention. Built around fresh spices, coconut, and rice, the island&#039;s cuisine reflects both its Hindu religious traditions and its position along historic Southeast Asian trade routes. Here&#039;s what to look for on menus and warung boards.Babi Guling (Suckling Pig)Often considered Bali&#039;s signature dish, babi guling is whole pig roasted over an open fire and stuffed with a mix of turmeric, galangal, garlic, chili, and other spices known as base genep. It&#039;s traditionally served for ceremonies and celebrations, but plenty of warungs sell it daily — Ubud is particularly well known for it.Bebek Betutu (Slow-Cooked Duck)Bebek betutu is duck (or sometimes chicken, called ayam betutu) marinated in the same spice paste used for babi guling, wrapped in banana leaves, and slow-cooked for hours until the meat falls off the bone. It&#039;s less commonly found on standard menus, so it&#039;s worth seeking out at restaurants that specialize in it, since the long cooking time means it&#039;s often made to order.Nasi CampurNasi campur — literally &quot;mixed rice&quot; — is less a single dish than a format: a scoop of rice surrounded by small portions of vegetables, meat, tofu, tempeh, and sambal. It&#039;s the closest thing to a culinary sampler of Balinese home cooking, and every warung&#039;s version looks a little different.Sate LilitUnlike skewered sate found elsewhere in Indonesia, sate lilit is made from minced fish or meat mixed with grated coconut and spices, then pressed around lemongrass stalks or bamboo skewers before grilling. The lemongrass adds a subtle citrus note as it cooks.LawarLawar is a mix of finely chopped vegetables (often young jackfruit or long beans), grated coconut, and minced meat, seasoned with a rich spice paste. There are red (with blood) and white (without) versions — worth asking about if you&#039;re curious, or want to avoid one.Sambal MatahThis raw sambal — made from thinly sliced shallots, lemongrass, chili, and lime, then doused in hot coconut oil — is less a dish and more a condiment that shows up everywhere. It&#039;s sharper and fresher than cooked sambals, and a good way to add heat to whatever you&#039;re eating.Jaje Bali (Balinese Sweets)Traditional Balinese sweets — like klepon (rice cake balls filled with palm sugar), dadar gulung (pandan crepes with coconut filling), and laklak (small coconut-topped pancakes) — are commonly sold at local markets rather than restaurants, so a morning market visit is often the best way to try a range of them at once.Where to Eat: Warungs vs. RestaurantsFor an authentic, budget-friendly introduction to Balinese food, local warungs are hard to beat — many operate as family businesses with recipes passed down through generations. Restaurants aimed at tourists tend to adjust spice levels and presentation, which isn&#039;t a bad thing if you&#039;re easing into the cuisine, but it&#039;s worth trying at least a few warung meals for a truer sense of local flavor.A Note on Spice LevelsBalinese food can run spicy, particularly anything built around sambal. If you&#039;re sensitive to heat, it&#039;s fine to ask for sambal on the side — most places are used to the request, especially in more touristed areas.
+            </p>
+</div>
+<div className={"flex flex-col-reverse md:flex-row gap-6 md:gap-0 justify-between md:items-center mt-auto"}>
+<a href={"blogs/a-food-lovers-guide-to-balinese-cuisine-must-try-dishes.html"} className={"group inline-flex items-center justify-center gap-3 font-semibold rounded-full text-sm cursor-pointer transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary bg-white text-foreground hover:bg-white/90 pl-3 pr-1.5 py-1.5 lg:pl-4 lg:pr-2 lg:py-2 w-fit text-xs lg:text-sm"}>
+<div className={"relative overflow-hidden flex items-center justify-center"}>
+<span className={"block transition-transform duration-500 group-hover:translate-y-[150%]"}>Read Article</span>
+<span className={"absolute block transition-transform duration-500 -translate-y-[150%] group-hover:translate-y-0"}>Read Article</span>
+</div>
+<span className={"bg-primary text-white p-1.5 rounded-full relative overflow-hidden flex items-center justify-center"}>
+<span className={"inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 group-hover:translate-x-[150%] group-hover:-translate-y-[150%]"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+<span className={"absolute inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+
+<span className={"absolute top-0 -left-[100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[400%] pointer-events-none z-10"}></span>
+</span>
+</a>
+<div className={"flex items-center gap-2 text-text-label-secondary text-xs md:text-sm font-medium"}>
+<svg className={"feather feather-calendar"} xmlns={"http://www.w3.org/2000/svg"} width={"24"} height={"24"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}><rect x={"3"} y={"4"} width={"18"} height={"18"} rx={"2"} ry={"2"}></rect><line x1={"16"} y1={"2"} x2={"16"} y2={"6"}></line><line x1={"8"} y1={"2"} x2={"8"} y2={"6"}></line><line x1={"3"} y1={"10"} x2={"21"} y2={"10"}></line></svg>                12 August 2026
+            </div>
+</div>
+</div>
+</div>
+</div>
+<div className={"blog-item"} data-category={"food-culture"}>
+<div className={"gsap-blog-card opacity-0 translate-y-16 flex gap-4 md:gap-5 lg:gap-6 items-center bg-card p-4 md:p-5 lg:p-6 rounded-2xl"}>
+<img src={"storage/blog-covers/01KZWECJZXTZ24M47WB9HBX2S1.webp"} alt={"Bali's Sacred Traditions: Temple Ceremonies and Cultural Etiquette for Travelers"} className={"rounded-xl lg:rounded-2xl hidden md:block md:size-32 lg:size-40 lg:h-40 object-cover shrink-0"} loading={"lazy"} />
+<div className={"flex flex-col h-full justify-between"}>
+<div className={"mb-3 lg:mb-4.5 grow"}>
+<h3 className={"text-base lg:text-lg font-semibold mb-1.5 lg:mb-2 line-clamp-2"}>Bali's Sacred Traditions: Temple Ceremonies and Cultural Etiquette for Travelers</h3>
+<p className={"text-xs lg:text-sm line-clamp-2 text-foreground/80"}>
+                Bali&#039;s Sacred Traditions: Temple Ceremonies and Cultural Etiquette for TravelersBali&#039;s culture is inseparable from its religion. Balinese Hinduism, distinct from Hinduism practiced elsewhere, shapes daily life on the island — from the small offerings placed on sidewalks each morning to the elaborate ceremonies that can shut down entire villages for a day. Understanding a bit of this before you visit makes the experience richer, and helps you avoid a few common missteps.Canang Sari: The Daily Offerings You&#039;ll See EverywhereThose small palm-leaf trays filled with flowers, rice, and incense that you&#039;ll see on doorsteps, sidewalks, and dashboards are called canang sari — daily offerings of gratitude placed by Balinese Hindus. They&#039;re easy to accidentally step on if you&#039;re not looking down, so it&#039;s worth watching your step, particularly around temple entrances and shopfronts.What to Wear When Visiting a TempleMost temples require visitors to wear a sarong, and often a sash tied around the waist, regardless of gender. Many temples rent or lend these at the entrance, but bringing your own (easily bought at local markets) saves time and hassle. Shoulders should generally be covered as well. Some inner temple areas are closed to visitors entirely, particularly during ceremonies — signage or staff will usually indicate this.Menstruation and Temple AccessTraditionally, women who are menstruating are asked not to enter temple grounds. This isn&#039;t enforced with any kind of check, but it&#039;s a genuine part of local belief, and respecting it (rather than treating it as an inconvenience to work around) is part of being a considerate guest.Attending a Ceremony as a VisitorIf you happen to be in a village during a ceremony — a temple anniversary (odalan), cremation, or tooth-filing ritual, for example — you may be welcome to observe respectfully from a distance, and sometimes invited to join. Dress modestly, keep noise to a minimum, avoid pointing your feet at offerings or shrines, and ask before taking photos, especially of people in prayer.Nyepi: The Day of SilenceOnce a year, Bali observes Nyepi, a Balinese New Year marked by complete silence across the island. No flights in or out, no lights after dark, no one on the streets — even tourists are required to stay inside their accommodation for the full 24 hours. If your trip overlaps with Nyepi, it&#039;s worth planning around it in advance, since it affects transport, dining, and activities island-wide for that day.Basic Etiquette Beyond TemplesA few general points that apply island-wide: use your right hand (or both hands) when giving or receiving something, avoid touching people&#039;s heads, and keep public displays of affection modest, particularly outside of tourist-heavy beach areas. None of this is strictly enforced for visitors, but it reflects genuine local values, and Balinese hosts generally notice and appreciate the effort.Supporting Local Traditions as a VisitorCeremonies, temple maintenance, and traditional arts are largely funded and organized by local communities (banjar) rather than the government. Buying offerings, crafts, or entrance tickets directly from local vendors — rather than always going through large tour operators — is a small way to put tourism spending back into the communities keeping these traditions alive.Curious about visiting a temple ceremony respectfully, or timing your trip around Nyepi? Our local guides can help you plan around Bali&#039;s ceremonial calendar — get in touch before you book your dates.
+            </p>
+</div>
+<div className={"flex flex-col-reverse md:flex-row gap-6 md:gap-0 justify-between md:items-center mt-auto"}>
+<a href={"blogs/balis-sacred-traditions-temple-ceremonies-and-cultural-etiquette-for-travelers.html"} className={"group inline-flex items-center justify-center gap-3 font-semibold rounded-full text-sm cursor-pointer transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary bg-white text-foreground hover:bg-white/90 pl-3 pr-1.5 py-1.5 lg:pl-4 lg:pr-2 lg:py-2 w-fit text-xs lg:text-sm"}>
+<div className={"relative overflow-hidden flex items-center justify-center"}>
+<span className={"block transition-transform duration-500 group-hover:translate-y-[150%]"}>Read Article</span>
+<span className={"absolute block transition-transform duration-500 -translate-y-[150%] group-hover:translate-y-0"}>Read Article</span>
+</div>
+<span className={"bg-primary text-white p-1.5 rounded-full relative overflow-hidden flex items-center justify-center"}>
+<span className={"inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 group-hover:translate-x-[150%] group-hover:-translate-y-[150%]"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+<span className={"absolute inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+
+<span className={"absolute top-0 -left-[100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[400%] pointer-events-none z-10"}></span>
+</span>
+</a>
+<div className={"flex items-center gap-2 text-text-label-secondary text-xs md:text-sm font-medium"}>
+<svg className={"feather feather-calendar"} xmlns={"http://www.w3.org/2000/svg"} width={"24"} height={"24"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}><rect x={"3"} y={"4"} width={"18"} height={"18"} rx={"2"} ry={"2"}></rect><line x1={"16"} y1={"2"} x2={"16"} y2={"6"}></line><line x1={"8"} y1={"2"} x2={"8"} y2={"6"}></line><line x1={"3"} y1={"10"} x2={"21"} y2={"10"}></line></svg>                12 August 2026
+            </div>
+</div>
+</div>
+</div>
+</div>
+<div className={"blog-item"} data-category={"travel-tips"}>
+<div className={"gsap-blog-card opacity-0 translate-y-16 flex gap-4 md:gap-5 lg:gap-6 items-center bg-card p-4 md:p-5 lg:p-6 rounded-2xl"}>
+<img src={"storage/blog-covers/01KZWEEKN4BY7D8BDQXMTDKN0G.html"} alt={"How to Plan Your First Trip to Bali: A Complete Travel Guide"} className={"rounded-xl lg:rounded-2xl hidden md:block md:size-32 lg:size-40 lg:h-40 object-cover shrink-0"} loading={"lazy"} />
+<div className={"flex flex-col h-full justify-between"}>
+<div className={"mb-3 lg:mb-4.5 grow"}>
+<h3 className={"text-base lg:text-lg font-semibold mb-1.5 lg:mb-2 line-clamp-2"}>How to Plan Your First Trip to Bali: A Complete Travel Guide</h3>
+<p className={"text-xs lg:text-sm line-clamp-2 text-foreground/80"}>
+                How to Plan Your First Trip to Bali: A Complete Travel GuideBali is a manageable destination to plan for, but it&#039;s also easy to overbook, underestimate travel times between regions, or land without a clear sense of where to base yourself. Here&#039;s a step-by-step approach to putting together a first trip.1. Decide When to GoBali has two main seasons: dry (roughly April to October) and wet (November to March). Dry season brings more consistent weather and is peak tourist season, especially July, August, and the Christmas/New Year period — expect higher prices and more crowds at popular sites. Wet season still offers plenty of sunny days between showers, shorter lines, and better rates, so it&#039;s worth considering if flexibility matters more to you than guaranteed sunshine.2. Check Visa RequirementsMany nationalities can enter Indonesia with a Visa on Arrival (VOA), valid for 30 days and extendable once for another 30. Requirements and eligible countries change from time to time, so it&#039;s worth checking Indonesia&#039;s official immigration site or your nearest consulate close to your travel date rather than relying on older information.3. Choose Your Base (or Bases)Bali is bigger than first-time visitors often expect, and traffic can turn a short distance on the map into an hour-long drive. Rather than basing yourself in one place for a two-week trip, consider splitting your stay: - Ubud — culture, rice terraces, wellness, cooler climate - Seminyak/Canggu — beach clubs, surf, nightlife, cafés - Uluwatu — cliffside views, surf breaks, quieter beaches - Sanur — calmer beaches, good for families or a slower pace - East Bali (Amed, Sidemen) — less touristed, diving, mountain viewsA common pattern for a 7–10 day trip is two or three bases rather than one, moving every few days.4. Budget RealisticallyBali can flex from budget backpacking to high-end luxury. As a rough guide: budget travelers might spend $30–50/day (guesthouse accommodation, warung meals, scooter rental); mid-range travelers $80–150/day (private villas or 3–4 star hotels, mix of dining, some tours); and luxury travelers considerably more, especially with private villas and drivers. Entrance fees for temples and attractions are generally low (often under $5), but adventure activities and day trips (rafting, diving, private tours) add up faster.5. Build a Loose Itinerary, Not a Packed OneIt&#039;s tempting to fill every day with activities, but Bali rewards a slower pace — traffic, heat, and the sheer number of worthwhile stops mean an overpacked schedule often leads to rushing through things rather than enjoying them. A reasonable rule of thumb: one major activity or destination per day, with flexibility for spontaneous stops.6. Decide on Transport EarlyHow you get around shapes your whole trip more than most people expect — covered in more detail in our guide to getting around Bali. Broadly, your options are: renting a scooter (cheap, flexible, but requires experience and an international license), hiring a private driver (more comfortable, no navigation stress, good for groups or longer trips), or using ride-hailing apps (works well within a single area, less practical for full-day tours).7. Book Accommodation and Activities in Advance for Peak SeasonDuring July, August, and the December holiday period, popular villas and well-reviewed tours can book out weeks ahead. Outside peak season, there&#039;s more room to book things a few days out or even on the ground.8. Pack for Humidity and Temple VisitsLightweight, breathable clothing is essential, but so is at least one modest outfit (covered shoulders, and a sarong if you don&#039;t want to rely on rentals) for temple visits. A reusable water bottle and reef-safe sunscreen are worth packing too, given the heat and the number of coral reef areas around the island.
+            </p>
+</div>
+<div className={"flex flex-col-reverse md:flex-row gap-6 md:gap-0 justify-between md:items-center mt-auto"}>
+<a href={"blogs/how-to-plan-your-first-trip-to-bali-a-complete-travel-guide.html"} className={"group inline-flex items-center justify-center gap-3 font-semibold rounded-full text-sm cursor-pointer transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary bg-white text-foreground hover:bg-white/90 pl-3 pr-1.5 py-1.5 lg:pl-4 lg:pr-2 lg:py-2 w-fit text-xs lg:text-sm"}>
+<div className={"relative overflow-hidden flex items-center justify-center"}>
+<span className={"block transition-transform duration-500 group-hover:translate-y-[150%]"}>Read Article</span>
+<span className={"absolute block transition-transform duration-500 -translate-y-[150%] group-hover:translate-y-0"}>Read Article</span>
+</div>
+<span className={"bg-primary text-white p-1.5 rounded-full relative overflow-hidden flex items-center justify-center"}>
+<span className={"inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 group-hover:translate-x-[150%] group-hover:-translate-y-[150%]"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+<span className={"absolute inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+
+<span className={"absolute top-0 -left-[100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[400%] pointer-events-none z-10"}></span>
+</span>
+</a>
+<div className={"flex items-center gap-2 text-text-label-secondary text-xs md:text-sm font-medium"}>
+<svg className={"feather feather-calendar"} xmlns={"http://www.w3.org/2000/svg"} width={"24"} height={"24"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}><rect x={"3"} y={"4"} width={"18"} height={"18"} rx={"2"} ry={"2"}></rect><line x1={"16"} y1={"2"} x2={"16"} y2={"6"}></line><line x1={"8"} y1={"2"} x2={"8"} y2={"6"}></line><line x1={"3"} y1={"10"} x2={"21"} y2={"10"}></line></svg>                12 August 2026
+            </div>
+</div>
+</div>
+</div>
+</div>
+<div className={"blog-item"} data-category={"travel-tips"}>
+<div className={"gsap-blog-card opacity-0 translate-y-16 flex gap-4 md:gap-5 lg:gap-6 items-center bg-card p-4 md:p-5 lg:p-6 rounded-2xl"}>
+<img src={"storage/blog-covers/01KZWEFHSMZVGPG03RF5GPGWZ0.html"} alt={"Getting Around Bali: Transportation Tips for Stress-Free Travel"} className={"rounded-xl lg:rounded-2xl hidden md:block md:size-32 lg:size-40 lg:h-40 object-cover shrink-0"} loading={"lazy"} />
+<div className={"flex flex-col h-full justify-between"}>
+<div className={"mb-3 lg:mb-4.5 grow"}>
+<h3 className={"text-base lg:text-lg font-semibold mb-1.5 lg:mb-2 line-clamp-2"}>Getting Around Bali: Transportation Tips for Stress-Free Travel</h3>
+<p className={"text-xs lg:text-sm line-clamp-2 text-foreground/80"}>
+                Getting Around Bali: Transportation Tips for Stress-Free TravelBali doesn&#039;t have a widespread public transit system, so figuring out how you&#039;ll get around is one of the more important planning decisions for your trip — arguably more important than picking which attractions to see, since it affects how much of your day is spent traveling versus actually doing things. Here&#039;s a breakdown of the main options.Renting a ScooterScooters are the classic way to get around Bali, and for good reason — they&#039;re cheap (often $5–8/day), flexible, and can weave through traffic that would stall a car. That said, they come with real trade-offs: Bali&#039;s traffic can be chaotic, road rules aren&#039;t always followed consistently, and an international driving permit plus a motorcycle endorsement is technically required (and increasingly checked, along with helmet use). Scooters make the most sense for shorter distances within one area — Canggu to Seminyak, for example — rather than long cross-island drives.Hiring a Private DriverA private driver is the most comfortable option for visitors who&#039;d rather not navigate Bali&#039;s traffic themselves, especially for full-day tours or transfers between regions (say, from the airport to Ubud, or Ubud to Uluwatu). Drivers who know the roads well can also help with route timing — leaving early to beat traffic to popular sunrise spots, for example — which is hard to replicate on your own. This is generally the best option for families, groups, or anyone with a packed multi-stop itinerary.Ride-Hailing AppsApps like Gojek and Grab work well in Bali for shorter trips within a single area, and are often cheaper than taxis for point-to-point rides. Coverage and pickup ease can vary by location — some tourist zones restrict app-based pickups in certain spots, requiring you to walk to a nearby main road. They&#039;re a solid option for restaurant runs or short hops, less practical for full-day sightseeing.Renting a CarSelf-driving a car is less common among tourists, partly because of Bali&#039;s narrow roads, aggressive traffic patterns in tourist areas, and limited parking at popular sites. It can make sense for confident drivers wanting more privacy and flexibility than a scooter offers without hiring a driver, but it&#039;s worth going in with realistic expectations about traffic, particularly around Seminyak, Canggu, and Ubud during peak hours.TaxisMetered taxis (Blue Bird is the most trusted brand) are widely available in more developed areas and airports. Always confirm the meter is running, or agree on a fixed price beforehand if it isn&#039;t — unmetered taxis targeting tourists are a known issue in some areas.Matching Transport to Your Trip StyleSolo traveler, short distances, comfortable riding: scooterMulti-day touring, groups, families, minimal hassle: private driverMostly staying in one area, occasional short trips: ride-hailing appLonger trip, confident driving in unfamiliar traffic: rental carMany travelers end up mixing two or three of these — a scooter for local trips around their base, and a private driver for full-day tours or inter-region transfers.A Note on Travel TimesGoogle Maps estimates in Bali can be misleading during peak traffic hours (roughly 7–9am and 4–7pm) or around ceremonies that temporarily close roads. Adding a buffer of 30–60 minutes for cross-region trips, especially in and around Denpasar, Canggu, and Ubud, will save you from arriving late or stressed.
+            </p>
+</div>
+<div className={"flex flex-col-reverse md:flex-row gap-6 md:gap-0 justify-between md:items-center mt-auto"}>
+<a href={"blogs/getting-around-bali-transportation-tips-for-stress-free-travel.html"} className={"group inline-flex items-center justify-center gap-3 font-semibold rounded-full text-sm cursor-pointer transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary bg-white text-foreground hover:bg-white/90 pl-3 pr-1.5 py-1.5 lg:pl-4 lg:pr-2 lg:py-2 w-fit text-xs lg:text-sm"}>
+<div className={"relative overflow-hidden flex items-center justify-center"}>
+<span className={"block transition-transform duration-500 group-hover:translate-y-[150%]"}>Read Article</span>
+<span className={"absolute block transition-transform duration-500 -translate-y-[150%] group-hover:translate-y-0"}>Read Article</span>
+</div>
+<span className={"bg-primary text-white p-1.5 rounded-full relative overflow-hidden flex items-center justify-center"}>
+<span className={"inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 group-hover:translate-x-[150%] group-hover:-translate-y-[150%]"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+<span className={"absolute inline-flex [&>svg]:w-5 [&>svg]:h-5 transition-transform duration-500 -translate-x-[150%] translate-y-[150%] group-hover:translate-x-0 group-hover:translate-y-0"}>
+<svg className={"size-3 lg:size-4"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} fill={"none"}><g id={"Arrow / Arrow_Up_Right_MD"}><path id={"Vector"} d={"M7 17L17 7M17 7H9M17 7V15"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}></path></g></svg>
+</span>
+
+<span className={"absolute top-0 -left-[100%] w-[50%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-25deg] transition-transform duration-700 group-hover:translate-x-[400%] pointer-events-none z-10"}></span>
+</span>
+</a>
+<div className={"flex items-center gap-2 text-text-label-secondary text-xs md:text-sm font-medium"}>
+<svg className={"feather feather-calendar"} xmlns={"http://www.w3.org/2000/svg"} width={"24"} height={"24"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"}><rect x={"3"} y={"4"} width={"18"} height={"18"} rx={"2"} ry={"2"}></rect><line x1={"16"} y1={"2"} x2={"16"} y2={"6"}></line><line x1={"8"} y1={"2"} x2={"8"} y2={"6"}></line><line x1={"3"} y1={"10"} x2={"21"} y2={"10"}></line></svg>                12 August 2026
+            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+ 
+    </PageShell>
+  )
+}
