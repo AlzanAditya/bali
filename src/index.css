@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #fd4621;
+  --color-primary-hover: #e03a17;
+  --color-foreground: #131313;
+  --color-background: #ffffff;
+  --color-card: #f6f6f6;
+  --color-border: #e5e5e5;
+  --color-text-paragraf: #434343;
+  --color-text-label-primary: #c0c0c0;
+  --color-text-label-secondary: #929090;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --spacing-15: 3.75rem;
+  --spacing-18: 4.5rem;
+  --spacing-28: 7rem;
+  --spacing-30: 7.5rem;
+}
+
+@layer base {
+  :root {
+    --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --color-background: #ffffff;
+    --color-foreground: #131313;
+    --color-primary: #fd4621;
+    --color-primary-hover: #e03a17;
+    --color-card: #f6f6f6;
+    --color-text-paragraf: #434343;
+    --color-text-label-primary: #c0c0c0;
+    --color-text-label-secondary: #929090;
+    --color-border: #e5e5e5;
+  }
+
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    overflow-x: clip;
+    min-height: 100vh;
+  }
+
+  /* Lenis smooth scroll classes */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  /* Keyframe Animations for Header */
+  @keyframes headerSlideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes headerSlideUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+  .animate-header-slide-down {
+    animation: 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards headerSlideDown;
+  }
+
+  .animate-header-slide-up {
+    animation: 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards headerSlideUp;
+  }
+
+  /* Image Reveal Cover */
+  .gsap-image-reveal-cover {
+    position: absolute;
+    inset: 0;
+    background-color: #f6f6f6;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+}
+
+/* 2xl Container & padding utilities matching reference */
+.px-30 {
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+}
+.py-15 {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+.gap-18 {
+  gap: 4.5rem;
+}
+.gap-28 {
+  gap: 7rem;
+}
+.pt-11\.5 {
+  padding-top: 2.875rem;
+}
+.gap-4\.5 {
+  gap: 1.125rem;
+}
+.mb-4\.5 {
+  mb: 1.125rem;
+}
+
+/* Ensure background/foreground classes match reference 1:1 */
+.bg-card {
+  background-color: #f6f6f6;
+}
+.bg-foreground {
+  background-color: #131313;
+}
+.text-foreground {
+  color: #131313;
+}
+.bg-background {
+  background-color: #ffffff;
+}
+.text-background {
+  color: #ffffff;
+}
+.bg-primary {
+  background-color: #fd4621;
+}
+.text-primary {
+  color: #fd4621;
+}
+.border-border {
+  border-color: #e5e5e5;
+}
+.text-text-label-secondary {
+  color: #929090;
+}
+.text-text-label-primary {
+  color: #c0c0c0;
+}
+.text-text-paragraf {
+  color: #434343;
+}

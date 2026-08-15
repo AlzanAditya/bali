@@ -1,17 +1,20 @@
-# Bali Bagus Journey — Vite + React
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-This project is a modular React/Vite reimplementation of the reference website.
+# Run and deploy your AI Studio app
 
-## Build model
+This contains everything you need to run your app locally.
 
-This project intentionally does **not** use Playwright, browser prerendering, `renderToString()`, or React SSR.
+View your app in AI Studio: https://ai.studio/apps/18ad1648-795f-460b-978a-4359c57abe90
 
-Instead it uses a Vite multi-page build:
+## Run Locally
 
-1. `scripts/generate-pages.ts` creates lightweight static HTML entry shells for every static route and every Tour/Blog/Transport slug.
-2. Vite compiles those HTML entry points together with the shared React application.
-3. Each generated `.html` file mounts the appropriate React page through TanStack Router using the browser's real URL.
+**Prerequisites:**  Node.js
 
-This preserves real `.html` URLs while keeping all page UI implemented as native React components and keeping Tour/Blog/Transport pages data-driven.
 
-The generated `pages/` directory is build-time output and is not runtime source code.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

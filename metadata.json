@@ -1,0 +1,6 @@
+{
+  "name": "Bali Bagus Journey",
+  "description": "Bali Bagus Journey - Private Tours & Airport Transfers in Bali. Complete website with private day tours, airport transfers, vehicles, blogs, galleries, and contact.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
