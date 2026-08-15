@@ -122,7 +122,7 @@ export function initHomePageAnimations() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: aboutSec,
-            start: "top 75%",
+            start: "top 85%",
           },
         });
 
@@ -133,20 +133,21 @@ export function initHomePageAnimations() {
 
         if (stats.length > 0) {
           gsap.set(stats, { y: 30, opacity: 0 });
-          const offset = tl.duration() > 0 ? "-=0.4" : 0;
+          const offset = tl.duration() > 0 ? "-=0.5" : 0;
           tl.addLabel("statsStart", offset);
-          tl.to(stats, { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }, "statsStart");
+          tl.to(stats, { y: 0, opacity: 1, duration: 0.7, stagger: 0.15, ease: "power3.out" }, "statsStart");
 
           gsap.utils.toArray<HTMLElement>(".gsap-counter").forEach((counter, idx) => {
             const target = parseFloat(counter.getAttribute("data-target") || "0");
             const decimals = parseInt(counter.getAttribute("data-decimals") || "0", 10);
             const valObj = { val: 0 };
+            counter.innerText = decimals === 0 ? "0" : (0).toFixed(decimals);
 
             tl.to(
               valObj,
               {
                 val: target,
-                duration: 1.2,
+                duration: 1.4,
                 ease: "power2.out",
                 onUpdate: () => {
                   counter.innerText =
@@ -155,7 +156,7 @@ export function initHomePageAnimations() {
                       : valObj.val.toFixed(decimals);
                 },
               },
-              `statsStart+=${idx * 0.2}`
+              `statsStart+=${idx * 0.1}`
             );
           });
         }
@@ -190,7 +191,7 @@ export function initHomePageAnimations() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: aboutSec,
-            start: "top 70%",
+            start: "top 85%",
           },
         });
 
@@ -201,18 +202,19 @@ export function initHomePageAnimations() {
 
         if (stats.length > 0) {
           gsap.set(stats, { y: 30, opacity: 0 });
-          tl.to(stats, { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }, "-=0.4");
+          tl.to(stats, { y: 0, opacity: 1, duration: 0.7, stagger: 0.15, ease: "power3.out" }, "-=0.5");
 
           gsap.utils.toArray<HTMLElement>(".gsap-counter").forEach((counter, idx) => {
             const target = parseFloat(counter.getAttribute("data-target") || "0");
             const decimals = parseInt(counter.getAttribute("data-decimals") || "0", 10);
             const valObj = { val: 0 };
+            counter.innerText = decimals === 0 ? "0" : (0).toFixed(decimals);
 
             tl.to(
               valObj,
               {
                 val: target,
-                duration: 1.5,
+                duration: 1.4,
                 ease: "power2.out",
                 onUpdate: () => {
                   counter.innerText =
@@ -221,7 +223,7 @@ export function initHomePageAnimations() {
                       : valObj.val.toFixed(decimals);
                 },
               },
-              `-=${0.6 - idx * 0.1}`
+              `-=${0.7 - idx * 0.1}`
             );
           });
         }

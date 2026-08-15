@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
-import { FloatingWhatsApp } from "./components/UI/FloatingWhatsApp";
 import { HomePage } from "./pages/HomePage";
 import { ToursPage } from "./pages/ToursPage";
 import { TourDetailPage } from "./pages/TourDetailPage";
@@ -39,17 +38,22 @@ export default function App() {
   }, []);
 
   const navigate = (path: string) => {
+    let cleanPath = (path || "/").trim();
+    if (!cleanPath.startsWith("/") && !cleanPath.startsWith("http")) {
+      cleanPath = "/" + cleanPath;
+    }
+
     // If same path, just scroll to top smoothly
-    if (path === currentPath) {
+    if (cleanPath === currentPath) {
       scrollToTop(false);
       return;
     }
 
-    // Update route immediately (no exit delay)
-    window.history.pushState({}, "", path);
-    setCurrentPath(path);
+    // Update route immediately
+    window.history.pushState({}, "", cleanPath);
+    setCurrentPath(cleanPath);
 
-    // Guaranteed immediate scroll reset to top
+    // Immediate scroll reset to top
     scrollToTop(true);
 
     // Refresh animations & ScrollTrigger for new page
@@ -84,54 +88,80 @@ export default function App() {
     navigate(href);
   };
 
-  // Router matching logic (supporting both clean URLs and legacy .html URLs)
+  // Router matching logic (supporting both clean URLs and .html URLs, leading/trailing slash resilience)
   const renderCurrentPage = () => {
-    const normalizedPath = (currentPath || "/").toLowerCase();
+    let p = (currentPath || "/").trim().toLowerCase();
+    p = p.split("?")[0].split("#")[0];
+    if (!p.startsWith("/")) p = "/" + p;
 
     // 1. Home
-    if (normalizedPath === "/" || normalizedPath === "" || normalizedPath === "/index.html") {
+    if (p === "/" || p === "/home" || p === "/index.html" || p === "/home.html") {
       return <HomePage onNavigate={navigate} />;
     }
 
-    // 2. Tours list or specific tour detail
-    if (normalizedPath === "/tours" || normalizedPath === "/tours/" || normalizedPath === "/tours.html") {
+    // 2. Blogs list or specific blog detail
+    if (p === "/blogs" || p === "/blogs/" || p === "/blogs.html" || p === "/blog" || p === "/blog.html") {
+      return <BlogsPage onNavigate={navigate} />;
+    }
+    if (p.startsWith("/blogs/") || p.startsWith("/blog/")) {
+      const slug = p
+        .replace(/^\/(blogs|blog)\//, "")
+        .replace(/\.html$/, "")
+        .replace(/\/$/, "");
+      if (slug) {
+        return <BlogDetailPage slug={slug} onNavigate={navigate} />;
+      }
+      return <BlogsPage onNavigate={navigate} />;
+    }
+
+    // 3. Tours list or specific tour detail
+    if (p === "/tours" || p === "/tours/" || p === "/tours.html" || p === "/tour" || p === "/tour.html") {
       return <ToursPage onNavigate={navigate} />;
     }
-    if (normalizedPath.startsWith("/tours/")) {
-      const slug = normalizedPath.replace("/tours/", "").replace(/\.html$/, "").replace(/\/$/, "");
-      return <TourDetailPage slug={slug} onNavigate={navigate} />;
+    if (p.startsWith("/tours/") || p.startsWith("/tour/")) {
+      const slug = p
+        .replace(/^\/(tours|tour)\//, "")
+        .replace(/\.html$/, "")
+        .replace(/\/$/, "");
+      if (slug) {
+        return <TourDetailPage slug={slug} onNavigate={navigate} />;
+      }
+      return <ToursPage onNavigate={navigate} />;
     }
 
-    // 3. Transport & Car Charter list or specific vehicle detail
-    if (normalizedPath === "/transport" || normalizedPath === "/transport/" || normalizedPath === "/transport.html") {
+    // 4. Transport & Car Charter list or specific vehicle detail
+    if (
+      p === "/transport" ||
+      p === "/transport/" ||
+      p === "/transport.html" ||
+      p === "/transports" ||
+      p === "/transports.html"
+    ) {
       return <TransportPage onNavigate={navigate} />;
     }
-    if (normalizedPath.startsWith("/transport/")) {
-      const slug = normalizedPath.replace("/transport/", "").replace(/\.html$/, "").replace(/\/$/, "");
-      return <TransportDetailPage slug={slug} onNavigate={navigate} />;
+    if (p.startsWith("/transport/") || p.startsWith("/transports/")) {
+      const slug = p
+        .replace(/^\/(transport|transports)\//, "")
+        .replace(/\.html$/, "")
+        .replace(/\/$/, "");
+      if (slug) {
+        return <TransportDetailPage slug={slug} onNavigate={navigate} />;
+      }
+      return <TransportPage onNavigate={navigate} />;
     }
 
-    // 4. About Us
-    if (normalizedPath === "/about" || normalizedPath === "/about/" || normalizedPath === "/about.html") {
+    // 5. About Us
+    if (p === "/about" || p === "/about/" || p === "/about.html" || p === "/about-us" || p === "/about-us.html") {
       return <AboutPage onNavigate={navigate} />;
     }
 
-    // 5. Photo Gallery
-    if (normalizedPath === "/gallery" || normalizedPath === "/gallery/" || normalizedPath === "/gallery.html") {
+    // 6. Photo Gallery
+    if (p === "/gallery" || p === "/gallery/" || p === "/gallery.html") {
       return <GalleryPage onNavigate={navigate} />;
     }
 
-    // 6. Blogs list or specific blog detail
-    if (normalizedPath === "/blogs" || normalizedPath === "/blogs/" || normalizedPath === "/blogs.html") {
-      return <BlogsPage onNavigate={navigate} />;
-    }
-    if (normalizedPath.startsWith("/blogs/")) {
-      const slug = normalizedPath.replace("/blogs/", "").replace(/\.html$/, "").replace(/\/$/, "");
-      return <BlogDetailPage slug={slug} onNavigate={navigate} />;
-    }
-
     // 7. Contact Us
-    if (normalizedPath === "/contact" || normalizedPath === "/contact/" || normalizedPath === "/contact.html") {
+    if (p === "/contact" || p === "/contact/" || p === "/contact.html" || p === "/contact-us" || p === "/contact-us.html") {
       return <ContactPage onNavigate={navigate} />;
     }
 
@@ -154,9 +184,6 @@ export default function App() {
 
       {/* Global Footer */}
       <Footer onNavigate={navigate} />
-
-      {/* Floating WhatsApp Action Widget */}
-      <FloatingWhatsApp />
     </div>
   );
 }

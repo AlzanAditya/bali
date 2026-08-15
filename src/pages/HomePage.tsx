@@ -101,7 +101,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="gsap-about-stat flex flex-col gap-1.5 lg:gap-2 py-6 md:pb-8 md:py-0 lg:pb-0 md:pt-0 mb-6 md:mb-0 border-b lg:border-0 border-[#E5E5E5]">
               <span className="text-3xl md:text-4xl font-semibold leading-none text-[#131313]">
                 <span className="gsap-counter" data-target="1500" data-decimals="0">
-                  1500
+                  0
                 </span>
                 <span className="text-[#FD4621]">+</span>
               </span>
@@ -110,7 +110,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="gsap-about-stat flex flex-col gap-1.5 lg:gap-2 pb-6 md:pb-8 lg:py-0 mb-6 md:mb-0 border-b lg:border-0 border-[#E5E5E5]">
               <span className="text-3xl md:text-4xl font-semibold leading-none flex items-center gap-2 text-[#131313]">
                 <span className="gsap-counter" data-target="4.9" data-decimals="1">
-                  4.9
+                  0.0
                 </span>
                 /5
                 <span className="text-[#FD4621]">
@@ -124,7 +124,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="gsap-about-stat flex flex-col gap-1.5 lg:gap-2 pb-6 md:pb-8 lg:py-0 md:mb-0 border-b lg:border-0 border-[#E5E5E5]">
               <span className="text-3xl md:text-4xl font-semibold leading-none text-[#131313]">
                 <span className="gsap-counter" data-target="8" data-decimals="0">
-                  8
+                  0
                 </span>{" "}
                 Years<span className="text-[#FD4621]">+</span>
               </span>
